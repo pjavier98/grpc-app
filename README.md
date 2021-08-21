@@ -69,6 +69,8 @@ cd grpc-app
 
 ```http
   POST /subscriptions
+  
+  curl --request POST --url http://localhost:3000/subscribers -H "Content-Type: application/json" -d '{ "name": "Jhon Doe", "email": "jhondoe@email.com"}'
 ```
 
 | Parameter | Type     | Description      |
@@ -80,16 +82,21 @@ cd grpc-app
 
 ```http
   GET /subscriptions
+  
+  $ curl --request GET --url http://localhost:3000/subscribers
 ```
 
 #### Get subscription
 
 ```http
   GET /subscriptions/${id}
+  
+  curl --request GET --url http://localhost:3000/subscribers/:id
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of item to fetch |
+
 
   
